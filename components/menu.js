@@ -14,7 +14,7 @@ export default function Menu () {
         </Link>
       </li>
       <li>
-        <Link href="/tarifas">
+        <Link href="/reservas">
           <a className='text-white uppercase transition hover:text-secondary'>Tarifas e Reservas</a>
         </Link>
       </li>

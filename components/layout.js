@@ -51,7 +51,7 @@ export default function Layout({ children }) {
             </div>
           </div>
         </div>
-        <div className='overflow-auto ml-16 mb-16 '>
+        <div className='ml-16 mb-16 mt-8 overflow-hidden flex flex-col '>
           {children}
         </div>
       </div>

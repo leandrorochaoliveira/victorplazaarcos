@@ -15,8 +15,8 @@ export default function Sidebar() {
         <Menu></Menu>
       </div>
 
-      <div className='bg-primary md-1 p-2 rounded flex-grow mb-1 overflow-auto'>
-        <h3 className='bg-secondary text-white text-center p-2 rounded text-lg'>Reserve Agora!</h3>
+      <h3 className='bg-secondary text-white text-center p-2 rounded-t text-lg'>Reserve Agora!</h3>
+      <div className='bg-primary md-1 p-2 rounded-b flex-grow mb-1 overflow-auto'>
         <Reserva></Reserva>
         <hr className='border-white'></hr>
         <p className='text-center text-white'>&quot;Reserve também por telefone&quot;</p>
