@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-
+import axios from 'axios'
 
 export default function Reserva() {
   const [enviado, setEnviado] = useState(false) 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    setEnviado(true)
     console.log(data);
+    
+    axios.post('http://localhost:3000/api/email', { data }).then((res) => {
+      setEnviado(true)
+    }).catch(
+      (e) => console.log(e)
+    )
   }
 
   return (
