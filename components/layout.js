@@ -22,7 +22,7 @@ export default function Layout({ children }) {
   return (
     <>
     <Slideshow images={images}></Slideshow>
-    <div className="flex md:ml-[5vw] lg:ml-[10vw] h-full bg-no-repeat bg-contain z-1 relative">
+    <div className="flex sm:ml-[1vw] md:ml-[5vw] lg:ml-[10vw] h-full bg-no-repeat bg-contain z-1 relative">
       <Sidebar></Sidebar>
       <div className='mt-3 flex flex-col flex-grow justify-between'>
         <div className='flex justify-end'>
@@ -51,7 +51,7 @@ export default function Layout({ children }) {
             </div>
           </div>
         </div>
-        <div className='ml-16 mb-16 mt-8 overflow-hidden flex flex-col '>
+        <div id="MainContent" className='ml-16 mb-16 mt-8 overflow-hidden flex flex-col '>
           {children}
         </div>
       </div>

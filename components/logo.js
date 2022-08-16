@@ -10,7 +10,7 @@ export default function Logo() {
           <a className='max-w-[90%] h-auto inline-block m-auto' >
             <Image  src="/logo.png" alt="Logo" width={190} height={100} />
           </a>
-          </Link>
+        </Link>
     </div>
   )
 }

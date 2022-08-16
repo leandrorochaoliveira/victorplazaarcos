@@ -2,11 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
- #__next {
-        @apply h-full;
-    }
-    html,
-    body {
-        @apply h-full;
-        font-size: 14px;
-    }
+#__next {
+    @apply h-full;
+}
+
+html,
+body {
+    @apply h-full;
+    font-size: 14px;
+}
+
+#MainContent p {
+    @apply mb-2;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a2411;
+  border: 2px solid #a38b7f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #794d37;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #280000;
+}
+::-webkit-scrollbar-track {
+  background: #a38b7f;
+  border: 2px solid #a38b7f;
+}
+::-webkit-scrollbar-track:hover {
+  background: #d5bbae;
+}
+::-webkit-scrollbar-track:active {
+  background: #745e53;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

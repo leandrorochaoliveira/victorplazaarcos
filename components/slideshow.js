@@ -18,7 +18,6 @@ export default function Slideshow (props) {
             <div className="image-container h-full">
               <Image className="max-w-full max-h-full" src={fadeImage} alt={'Image'+index} width={1920} height={1440} />
             </div>
-       
           </div>
         ))}
         </Fade>
