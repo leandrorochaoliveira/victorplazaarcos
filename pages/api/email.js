@@ -1,9 +1,6 @@
-import {
-  SMTPClient
-} from 'emailjs';
-
 export default async function handler(req, res) {
-
+  let nodemailer = require('nodemailer')
+  
   const {
     text,
     html,
@@ -11,37 +8,34 @@ export default async function handler(req, res) {
     subject
   } = req.body;
 
-  const client = new SMTPClient({
-    user: process.env.SMTP_EMAIL,
-    password: process.env.SMTP_PASSWORD,
+  
+  const transporter = nodemailer.createTransport({
+    port: process.env.SMTP_PORT,
     host: process.env.SMTP_HOST,
-    ssl: true
-  });
+    auth: {
+      user: process.env.SMTP_EMAIL,
+      pass: process.env.SMTP_PASSWORD,
+    },
+    secure: false,
+  })
 
-  try {
-    const messageSend = await client.sendAsync({
-        text: text,
-        from: email,
-        to: process.env.SMTP_RECEIVE,
-        subject: subject,
-        attachment: [{
-          data: '<html>'+html+'</html>',
-          alternative: true
-        }]
-      },
-      (err, message) => {
-        res.status(400).end(JSON.stringify({
-          message: err || message
-        }))
-      }
-    )
-    res.status(200).end(JSON.stringify({
-      message: messageSend
-    }))
-  } catch (e) {
-    res.status(400).end(JSON.stringify({
-      message: "Error"
-    }))
-    return;
-  }
+  const mailData = {
+    from: email,
+    to: process.env.SMTP_RECEIVE,
+    subject: subject,
+    text: text,
+    html: html
+   }
+
+   transporter.sendMail(mailData, function (err, info) {
+    if(err)
+      res.status(400).end(JSON.stringify({
+        message: err.message
+      }))
+    else
+      res.status(200).end(JSON.stringify({
+        message: info
+      }))
+  })
+  
 }
