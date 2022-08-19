@@ -5,10 +5,15 @@ import Link from 'next/link'
 
 export default function Logo() {
   return (
-    <div className='text-center'>
+    <div className='text-center grow'>
         <Link href="/">
-          <a className='max-w-[90%] h-auto inline-block m-auto' >
-            <Image  src="/logo.png" alt="Logo" width={190} height={100} />
+          <a className='w-full max-w-[90%] h-16 sm:h-[100px] inline-block m-auto' >
+            <span style={{display: 'block', width: '100%', height: '100%', position: 'relative'}}>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              layout="fill" objectFit="contain" />
+            </span>
           </a>
         </Link>
     </div>

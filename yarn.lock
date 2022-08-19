@@ -1669,6 +1669,13 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-haiku@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-haiku/-/react-haiku-2.0.3.tgz#9fe74706d2cb2668c8529e447d00bad7cef55abc"
+  integrity sha512-eR3e3/xSma/+9gtM2JIzx7wrFOap7NQ4IMPiJx9/p8AzRN6ybjgPzIpfaCwL5n2dvFoYymVk+lP26HNbKGn8cw==
+  dependencies:
+    react ">=16.8.0"
+
 react-hook-form@^7.34.0:
   version "7.34.0"
   resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.34.0.tgz"
@@ -1687,7 +1694,7 @@ react-slideshow-image@^4.0.4:
     "@tweenjs/tween.js" "^18.6.4"
     resize-observer-polyfill "^1.5.1"
 
-react@18.2.0:
+react@18.2.0, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
